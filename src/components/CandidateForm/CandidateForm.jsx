@@ -17,7 +17,7 @@ export default function CandidateForm({addCandidate}) {
 
     return (
         <div className={styles.form}>
-            <input type="text" placeholder='Nova Tarefa' id='Name' className={styles.input}/>
+            <input type="text" placeholder='Novo Candidato' id='Name' className={styles.input}/>
             <div className={styles.button} onClick={() => createTask()}>Salvar</div>
         </div>
     )
