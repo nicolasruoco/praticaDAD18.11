@@ -9,7 +9,7 @@ function VotingApp() {
     const [candidates, setCandidates] = useState([])
 
     const addCandidate = (name) => {
-        setCandidates([...canditates, {name: name, votes: 0}])
+        setCandidates([...candidates, {name: name, votes: 0}])
     }
 
     const addVote = (name) => {
@@ -24,18 +24,18 @@ function VotingApp() {
         setCandidates(candidates.filter((candidate) => candidate.name !== name))
     }
 
-    const sumVotes = () => {
-        let quant = 0
-        candidates.forEach(
-            quant += candidates.votes
-        )
-    }
+    // const sumVotes = () => {
+    //     let quant = 0
+    //     candidates.forEach(
+    //         quant += candidates.votes
+    //     )
+    // }
 
     return(
         <div className={styles.appContainer}>
             <CandidateForm addCandidate={addCandidate}/>
             <CandidateList canditates={candidates} addVote={addVote} removeCandidate={removeCandidate}/>
-            <VotesSummary votes={sumVotes()} />
+            {/* <VotesSummary votes={sumVotes()} /> */}
         </div>
     )
 }

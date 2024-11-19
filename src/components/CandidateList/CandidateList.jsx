@@ -15,9 +15,14 @@ export default function CandidateList({candidates, addVote, removeCandidate}){
         <div className={styles.listContainer}>
             <h1 className={styles.header}>Candidatos</h1>
 
-            {candidates.map((candidate) => 
-            <CandidateItem key={candidate.name} candidate={candidate} vote={vote} remove={remove} />
+            {candidates && Array.isArray(candidates) ? (
+                candidates.map((candidate) => (
+                    <CandidateItem key={candidate.name} candidate={candidate} vote={vote} remove={remove} />
+                ))
+            ) : (
+                <p>Nenhum candidato encontrado.</p>
             )}
+
 
         </div>
     )
