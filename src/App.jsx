@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import VotingApp from "./components/VotingApp/VotingApp";
+import VotingApp from "./components/VotingApp/VotingApp.jsx";
 
 function App() {
-  return; // INSIRA O COMPONENTE DA APLICACAO AQUI
+  return(
+    <VotingApp/>
+  )
 }
 
 export default App;
